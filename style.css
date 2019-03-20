@@ -1,0 +1,40 @@
+html, body, main{
+  height: 100%;
+}
+
+body{
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background-color: #d2d2d2;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 1px 1px 10px rgba( 0, 0, 0, 0.4 );
+}
+
+body, a{
+  color: white;
+}
+
+h1{
+  font-size: 4em;
+}
+
+p{
+  font-size: 2em;
+}
+
+footer{
+  font-size: 0.7em;
+}
+
+main, footer{
+  padding: 2em 2em 1em;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
