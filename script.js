@@ -1,4 +1,8 @@
 function ready( fn ) {
+  /*
+    Wait until the page has loaded.
+    http://youmightnotneedjquery.com/#ready
+  */
   if ( document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading' ){
     fn();
   } else {
@@ -8,10 +12,18 @@ function ready( fn ) {
 
 ready( function(){
   function makeApiCall( url, callback ){
+    /*
+      A helper function for making API calls.
+    */
     var xhr = new XMLHttpRequest();
 
     xhr.addEventListener( 'load', function(){
-      var response = JSON.parse(xhr.responseText);
+      var response = {};
+
+      try{
+        response = JSON.parse(xhr.responseText);
+      } catch( err ){ /* noop */ }
+
       if ( callback ){
         callback( response );
       }
@@ -36,6 +48,7 @@ ready( function(){
       
       if (data && data.photos && data.photos.pages > 0){
 				var photo = data.photos.photo[0];
+        
 				document.body.style.backgroundImage = "url('" + photo.url_l + "')";
 				imageSourceLink.setAttribute( 'href', 'http://www.flickr.com/photos/' + photo.owner + '/' + photo.id );
 			}

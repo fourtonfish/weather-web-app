@@ -4,4 +4,4 @@
 
 A weather web app powered by [OpenWeatherMap](http://openweathermap.org), [Flickr](http://flickr.com/services/api/), and [Glitch](https://glitch.com).
 
-Make your own weather web app [with my tutorial](https://fourtonfish.com/blog/weather-web-app-web-api-tutorial/)  (coming soon).
+Make your own [with my tutorial](https://fourtonfish.com/blog/weather-web-app-web-api-tutorial/)  (coming soon).
